@@ -38,13 +38,17 @@
           >
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
-              <li>
-                <button>signin</button>
+              <li class="py-3">
+                <button class="btn btn-facebook">
+                  <a class="text-decoration-none text-white" href="/login">login  </a>
+                </button>
+              </l my-5i>
+              <li class="py-3">
+                <button class="btn btn-facebook">
+                  <a class="text-decoration-none text-white" href="/signUp">signUp</a>
+                  
+                </button>
               </li>
-              <li>
-                <button>signup</button>
-              </li>
-
               <!-- Nav Item - User Information -->
               <li class="nav-item dropdown no-arrow">
                 <a
@@ -106,10 +110,10 @@
             </h1>
             <!-- articles -->
             <div class="row">
-              <div class="col-sm-6">
-                <div class="card py-5">
+              <% for(article of articles){ %>
+              <div class="col-sm-11 py-3 shadow">
+                <div class="card shadow">
                   <div class="card-body">
-                    <% for(article of articles){ %>
                     <h5 class="card-title"><%= article.title %></h5>
                     <p class="card-text">
                       <%= article.content %> Lorem ipsum dolor sit amet
@@ -121,12 +125,12 @@
                     <img src="" alt="" />
                     <div><span> creation: 123124</span></div>
                     <div><span>Article by: pepe</span></div>
-                    <a href="#" class="btn btn-primary mb-5">See full info</a>
-                    <hr>
-                    <% } %>
+                    <a href="#" class="btn btn-success mb-5">See full info</a>
+                    <hr />
                   </div>
                 </div>
               </div>
+              <% } %>
             </div>
           </div>
         </div>

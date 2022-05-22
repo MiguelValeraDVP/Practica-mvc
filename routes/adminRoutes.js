@@ -18,6 +18,8 @@ adminRouter.get("/updateArticle", adminController.updateArticle);
 adminRouter.post("/updateArticle", adminController.updatedArticle);
 
 /* RENDER /ADMIN/DELETEARTICLE  */
-adminRouter.get("/", adminController.delete);
+adminRouter.get("/delete/:id", adminController.delete);
+
+adminRouter.post("delete/:id", adminController.deletedArticle);
 
 module.exports = adminRouter;
